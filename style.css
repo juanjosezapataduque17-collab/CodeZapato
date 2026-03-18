@@ -57,6 +57,26 @@ main {
     color: #3498db;
 }
 
+/* BOTÓN NAVBAR */
+.nav-link.btn-login {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: #fff !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-link.btn-login:hover {
+    background: linear-gradient(135deg, #5dade2, #3498db);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
+}
+
+.nav-link.btn-login:active {
+    transform: scale(0.95);
+}
+
 /* ===== HAMBURGER ===== */
 .hamburger {
     display: none;
@@ -100,15 +120,176 @@ main {
     }
 }
 
-/* ===== FOOTER ===== */
+/* ===== HERO ===== */
+.hero-video {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
 
+.hero-video__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-video__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* ===== LOGIN ENCIMA DEL VIDEO ===== */
+.auth-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+}
+
+/* Caja */
+.auth-forms {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    overflow: hidden;
+}
+
+/* Tabs */
+.auth-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.auth-tab {
+    flex: 1;
+    padding: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #7f8c8d;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.auth-tab:hover {
+    color: #2c3e50;
+    background-color: #f8f9fa;
+}
+
+.auth-tab.active {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    background-color: #f8f9fa;
+}
+
+/* ===== FORMULARIOS ===== */
+
+/* Ocultar por defecto */
+#login-form,
+#register-form {
+    display: none;
+}
+
+/* Mostrar activo */
+#login-form.active,
+#register-form.active {
+    display: block;
+}
+
+/* Estilo base */
+.auth-form {
+    padding: 2rem;
+}
+
+.auth-form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Inputs */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #34495e;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Botón */
+.auth-submit {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.auth-submit:hover {
+    background-color: #2980b9;
+}
+
+/* Mensajes */
+.auth-message {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    min-height: 1.5rem;
+}
+
+/* ===== FOOTER ===== */
 .footer {
     background-color: #121f2c;
     color: #ffffff;
     margin-top: auto;
 }
 
-/* CONTENEDOR PRINCIPAL (usa tu clase .container del HTML) */
 .footer .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -118,7 +299,6 @@ main {
     padding: 2.5rem 1.5rem;
 }
 
-/* LOGO */
 .footer-logo {
     font-size: 1.4rem;
     font-weight: bold;
@@ -131,15 +311,12 @@ main {
     color: #cccccc;
 }
 
-/* TITULOS */
 .footer-title {
     font-size: 1rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-/* ENLACES */
 .footer-menu {
     list-style: none;
 }
@@ -151,8 +328,6 @@ main {
 .footer-link {
     color: #cccccc;
     text-decoration: none;
-    font-size: 0.9rem;
-    transition: 0.3s;
 }
 
 .footer-link:hover {
@@ -160,75 +335,14 @@ main {
     padding-left: 5px;
 }
 
-/* CONTACTO */
 .footer-contact p {
     font-size: 0.9rem;
-    margin-bottom: 0.4rem;
     color: #cccccc;
 }
 
-/* PARTE INFERIOR */
 .footer-bottom {
     border-top: 1px solid rgba(255,255,255,0.1);
     text-align: center;
     padding: 1rem;
     font-size: 0.8rem;
-    color: #aaaaaa;
-}
-
-/* ===== RESPONSIVE FOOTER ===== */
-@media (max-width: 768px) {
-
-    .footer .container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-}
-
-/* HERO */
-.hero-video {
-    position: relative;
-    height: 100vh; /* pantalla completa */
-    overflow: hidden;
-}
-
-/* Video ocupa todo */
-.hero-video__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* evita que se deforme */
-}
-
-/* Capa oscura */
-.hero-video__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* Texto encima */
-.hero-video__content {
-    position: relative;
-    z-index: 2;
-    color: white;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* Botón simple */
-.hero-video__btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #3498db;
-    color: white;
-    text-decoration: none;
 }
