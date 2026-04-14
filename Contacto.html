@@ -1,53 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Moderno Responsivo</title>
+    <title>Contacto - Menú Moderno Responsivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="assets/img/setso.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
+c
     <header class="header">
         <nav class="navbar">
-           <a href="index.html" class="logo">MI LOGO</a>
+            <a href="index.html" class="logo">MI LOGO</a>
 
-           <ul class="nav-menu">
-              <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-              <li class="nav-item"><a href="servicios.html" class="nav-link">Servicios</a></li>
-              <li class="nav-item"><a href="portafolio.html" class="nav-link">Portafolio</a></li>
-              <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
-              <button class="Login">
-                <li class="nav-item"><a href="IniciarSesion.html" class="nav-link btn-login">Iniciar Sesion</a></li>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="servicios.html" class="nav-link">Servicios</a></li>
+                <li class="nav-item"><a href="portafolio.html" class="nav-link">Portafolio</a></li>
+                <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li class="nav-item">
+                    <a href="IniciarSesion.html" class="nav-link btn-login">Iniciar Sesión</a>
+                </li>
+            </ul>
 
-              </button>
-           </ul>
-
-           <div class="hamburger">
-               <span class="bar"></span>
-               <span class="bar"></span>
-               <span class="bar"></span>
-           </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
 
     <main class="main-content">
         <!-- seccion de hero con video -->
         <section class="hero-video">
-        <!-- video de fondo: remplaza "tu-video.mp4" con la ruta del archivo-->
+            <!-- video de fondo: remplaza "tu-video.mp4" con la ruta del archivo-->
             <video class="hero-video__bg" autoplay muted loop playsinline>
                 <source src="assets/videos/sage-and-omen-valorant-moewalls-com.mp4" type="video/mp4">
                 <!-- mensaje de respaldo si el navegador no soporta videos-->
                 Tu navegador no soporta el elemento de video HTML5.
             </video>
 
-             <!-- Capa oscura encima del video para mejorar legibilidad del texto-->
+            <!-- Capa oscura encima del video para mejorar legibilidad del texto-->
             <div class="hero-video__overlay"></div>
 
             <!-- contenido de texto que se muestra sobre el video-->
-             
-                
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Ponte en contacto</h2>
+                    <p>¿Tienes algún proyecto en mente o simplemente quieres saludar? Llena el formulario o usa esta
+                        información para contactarnos directamente.</p>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span>Av. Principal 123, Tu Ciudad</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <span>+123 456 7890</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <span>info@tucorreo.com</span>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Envíanos un mensaje</h2>
+                    <form id="form-contacto">
+                        <div class="form-group">
+                            <label for="contact-name">Nombre Completo</label>
+                            <input type="text" id="contact-name" placeholder="Tu nombre..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Correo Electrónico</label>
+                            <input type="email" id="contact-email" placeholder="tucorreo@ejemplo.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-msg">Mensaje</label>
+                            <textarea id="contact-msg" rows="4" placeholder="¿En qué te podemos ayudar?"
+                                required></textarea>
+                        </div>
+                        <button type="button" class="auth-submit" onclick="alert('¡Mensaje enviado con éxito!')">Enviar
+                            Mensaje</button>
+                    </form>
+                </div>
+            </div>
+
         </section>
         <!-- fin seccion hero con video-->
     </main>
@@ -57,7 +98,7 @@
 
             <div class="footer-brand">
                 <span class="footer-logo">MI LOGO</span>
-                <p class="footer-description">negrooooooooooooooooooooooooooo</p>   
+                <p class="footer-description">negrooooooooooooooooooooooooooo</p>
             </div>
 
             <div class="footer-links">
@@ -86,4 +127,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -52,6 +52,21 @@ document.addEventListener('DOMContentLoaded', () => {
     loginTab.addEventListener('click', showLogin);
     registerTab.addEventListener('click', showRegister);
 
+    // Animación de entrada al título "Accede a tu cuenta"
+    const loginTitle = document.querySelector('#login-form h2');
+    if (loginTitle) {
+        loginTitle.animate([
+            { opacity: 1 },
+            { opacity: 0.3 },
+            { opacity: 1 },
+            { opacity: 0.3 },
+            { opacity: 1 }
+        ], {
+            duration: 1600,
+            easing: 'ease-in-out'
+        });
+    }
+
     // ===== REGISTRO REAL =====
     registerForm.addEventListener('submit', async (e) => {
         e.preventDefault();
